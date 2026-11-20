@@ -1,0 +1,768 @@
+/* 
+|==========================|
+|----SECTION-FORMATTING----|
+|==========================|
+*/
+
+* {                      /*Asterisks means ALL*/
+box-sizing: border-box;
+}
+body {
+color: #F7F4F3;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 1.1rem;
+line-height: 1.6;
+margin: 0 0 1rem;
+}
+/*Attempting to rotate my background image 25 degrees, because it looks way better. This will probably go bad.*/
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;    /* Goes past the edges of the screen, so you can't see the broken corners*/
+  z-index: -1;   /* Makes the image sit behind my main content */
+  background-image: url("images/bg-brick.jpg");
+  background-repeat: repeat;
+  background-size: 520px;    
+  transform: rotate(-25deg);
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+/* 
+|===========================|
+|-CUSTOM SECTION FORMATTING-|
+|===========================|
+*/
+
+#page-wrap {
+  position: relative;
+}
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+#header, 
+#intro, 
+#bio, 
+#timeline, 
+#surprise,
+#footer {
+  position: relative;
+  z-index: 1;
+}
+
+#bio a:link {
+  text-decoration: none; 
+  color: hsl(41 100% 53% / 1);
+   paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+filter: drop-shadow(1px 1px 0px #000000)
+}
+
+#bio a:visited {
+  text-decoration: none;
+  color: hsl(348 4% 35% / 1); 
+     paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+filter: drop-shadow(1px 1px 0px #000000)
+
+}
+
+#bio a:focus {
+ color: hsl(0 79% 49% / 1);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+}
+
+#bio a:hover {
+
+ color: hsl(247 244% 243% / 1);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+ 
+}
+
+#bio a:active {
+color: hsl(0 79% 49% / 1);
+font-weight: 900;
+text-transform: uppercase; 
+text-decoration: none;
+paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+filter: drop-shadow(1px 1px 0px #000000)
+	}
+
+#timeline a:focus {
+color: #F7F4F3;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+}
+
+
+
+#intro {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+#footer {
+  text-align: center;
+}
+#header {
+   height: 45vw;
+}
+/* 
+|==========================|
+|-----IMAGE-FORMATTING-----|
+|==========================|
+*/
+#sticky-zone {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 76%;
+	pointer-events: none;
+  }
+
+.sticky-curry {
+  position: sticky;
+  top: 0;
+  display: block;
+  height: auto;
+  width: 29vw;
+  margin-left: auto;
+  margin-right: 5vw;
+  z-index: 0;
+  pointer-events: none;
+}
+.young-curry {
+width: 100%;
+height: auto;
+filter: drop-shadow(-0.67vw 0.92vw 0.48vw #000000);
+display: block;
+}
+
+.mid-curry {
+width: 100%;
+height: auto;
+filter: drop-shadow(-0.67vw 0.92vw 0.48vw #000000);
+display: block;
+}
+
+.photos {
+  display: flex;
+  justify-content: center; 
+  gap: 2rem;
+	width: 80%;
+	max-width: 60rem;
+}
+.photo-card {
+  position: relative;
+  width: 17.5vw; /*This makes my photos prioritize 17.5vw based on the size of the screen*/
+  min-width: 140px; /*HOWEVER, if the screen is smaller, the photo will not be smaller than 140px*/
+  max-width: 450px; /*If the screen is larger, the photo will not be larger than 450px*/
+  margin: 0;
+}
+.photo-card figcaption {
+position: absolute; /*REMEMBER: to have something exactly where you want it and it never waivers, you need a RELATIVE PARENT - one step up in the nesting dolls. This position is absolute on the relative parent, the actual photo-card*/
+left: 2.5%;
+bottom: 4.5%;
+width: 95%;
+font-size: 1rem; /*Prioritize using rem units for better scalability*/
+font-family: 'Josefin Sans', sans-serif;
+color: #D7DEDC;
+margin: 0;
+text-align: center;
+line-height: 1.1;
+-webkit-text-stroke: 0.21vw #000000; /* fix for figma stroke not working*/
+paint-order: stroke fill;
+filter: drop-shadow(3px 3px 0px #000000);
+opacity: 0;
+}
+
+.photo-card:hover figcaption {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#vagabond-quote {
+background-image: url("images/paper-rip-top.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+min-height: 30vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#vagabond-quote figure { 
+  margin: 0; 
+}
+
+#vagabond-quote blockquote {
+  margin-bottom: 0;
+max-width: 40rem;
+padding-bottom: 0.2rem;
+text-align: center;
+position: relative;
+z-index: 1;
+color: #F7F4F3;
+font-family: 'Playwrite US Modern', cursive;
+font-size: 1.8rem;
+line-height: 1.1;
+filter: drop-shadow(3px 3px 1px #000000);
+paint-order: stroke fill;
+-webkit-text-stroke: 0.13em #000000; /*Use em units for stroke, so it follows all scaling of font.*/
+}
+
+
+.vagabond {
+font-size: 0.8rem;
+margin-top: 0rem;
+font-family: 'Josefin Sans', sans-serif;
+color: hsl(348 4% 35% / 1); 
+line-height: 1rem;
+text-align: center;
+filter: drop-shadow(1px 1px 1px #000000);
+paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+opacity: 60%;
+text-transform: uppercase;
+}
+
+
+.vagabond a {
+
+font-size: 0.8rem;
+margin-top: 0rem;
+font-family: 'Josefin Sans', sans-serif;
+color: hsl(348 4% 35% / 1); 
+text-decoration: none;
+text-align: center;
+line-height: 1.1;
+paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+}
+
+.vagabond a:hover {
+ color: hsl(247 244% 243% / 1);
+  font-weight: 900; 
+  text-transform: uppercase;
+  text-decoration: none;
+  /*text-shadow: x-axis (rem), y-axis (rem), blur radius (rem) hsl;*/
+  
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+}
+
+
+#vagabond-quote  a:focus {
+color: #F7F4F3;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+}
+#bio {
+background-image: url("images/bio-box.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+width: 45%;
+max-width: 50rem;
+margin: 2rem auto;
+padding: 3rem;
+text-indent: 1.5em;
+}
+
+#timeline h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.entry {
+position: relative;
+margin: 0 auto;
+width: 40%;
+max-width: 60rem;
+}
+.entry + .entry {
+  margin-top: -3vw;
+}
+.entry img {
+display: block;
+width: 100%;
+height: auto;
+}
+.entry-quote {
+position: absolute;
+left: 2%;
+top: 25%;
+width: 48%;
+margin: 0;
+font-family: 'Playwrite US Modern', cursive;
+filter: drop-shadow(1px 1px 0.5px #000000);
+paint-order: stroke fill;
+-webkit-text-stroke: 0.10vw #000000;
+font-size: 1.1vw;
+text-align: center;
+text-wrap: pretty;
+
+}
+.entry-quote.flip {
+  left: 50%;
+}
+.entry-quote a {
+font-size: 0.9vw;
+font-family: 'Josefin Sans', sans-serif;
+color: hsl(37, 77%, 63%); 
+text-decoration: none;
+margin: 0;
+line-height: 1;
+text-align: center;
+opacity: 80%;
+}
+
+.entry-quote a:hover {
+color: hsl(247 244% 243% / 1);
+  font-weight: 900; 
+  
+  text-decoration: none;
+  /*text-shadow: x-axis (rem), y-axis (rem), blur radius (rem) hsl;*/
+  
+  text-shadow: 0.04rem 0.04rem 0rem hsl(0 90% 55% / 1),  /* 1. Red */
+    0.08rem 0.08rem 0rem hsl(30 95% 55% / 1),            /* 2. Orange */
+    0.12rem 0.12rem 0rem hsl(55 95% 55% / 1),            /* 3. Yellow */
+    0.16rem 0.16rem 0rem hsl(120 75% 45% / 1),           /* 4. Green */
+    0.20rem 0.20rem 0rem hsl(210 90% 55% / 1),           /* 5. Blue */
+    0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
+}
+
+.surprise { 
+  height: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0vw;
+  position: relative;
+  z-index: 1;
+}
+.surprise-img {
+display: block;
+width: 45vw;
+height: auto;
+margin-left: auto;
+}
+
+.center {
+  text-align: center;
+}
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+/* 
+|=========================|
+|-----TEXT-FORMATTING-----|
+|=========================|
+*/
+
+
+.dont-dream {
+  position: absolute;
+  width: 37.84vw;
+  height: 4.17vw;
+  right: 23vw;
+  top: 8.13vw;
+  margin: 0;
+white-space: nowrap;
+
+  font-family: 'Prompt', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5.34vw;
+  line-height: 4.17vw;
+  text-align: right;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
+
+  color: #F7F4F3;
+
+-webkit-text-stroke: 0.21vw #000000; /* fix for figma stroke not working*/
+paint-order: stroke fill;
+
+text-shadow: 0vw 0.21vw 0vw #FF0000, 0vw 0.42vw 0vw #FF7300, 0vw 0.63vw 0vw #FFEE00, 0vw 0.83vw 0vw #00FF09, 0vw 1.04vw 0vw #008CFF, 0vw 1.25vw 0vw #3700FF, 0vw 1.46vw 0vw #FF00D5;
+transform-origin: right center;
+transform: rotate(-26.17deg);
+}
+
+.be-it {
+position: absolute;
+width: 20.5vw;
+height: 4.15vw;
+right: 29vw;
+top: 32vw;
+margin: 0;
+white-space: nowrap;
+
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 900;
+font-size: 7.5vw;
+line-height: 4.17vw;
+
+text-align: right;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #F7F4F3;
+
+-webkit-text-stroke: 0.21vw #000000;
+paint-order: stroke fill;
+  
+text-shadow: 0vw 0.21vw 0vw #FF0000, 0vw 0.42vw 0vw #FF7300, 0vw 0.63vw 0vw #FFEE00, 0vw 0.83vw 0vw #00FF09, 0vw 1.04vw 0vw #008CFF, 0vw 1.25vw 0vw #3700FF, 0vw 1.46vw 0vw #FF00D5;
+}
+
+h1 {
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 800;
+font-size: 8.73vw;
+line-height: 1.1;
+margin: 0;
+color: #DE1A1A;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.057em #000000;
+text-shadow: -0.046em 0.052em 0 #FFFFFF, -0.115em 0.115em 0.034em #000000;
+}
+
+h2 {
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 800;
+font-size: 3rem;
+line-height: 1.1rem;
+margin: 0;
+color: #DE1A1A;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.50vw #000000;
+text-shadow: -0.35vw 0.35vw 0vw #FFFFFF, -0.75vw 0.70vw 0.20vw #000000;
+}
+
+h3 {
+font-family: 'Prompt';
+font-style: normal;
+font-weight: 800;
+font-size: 3rem;
+line-height: 1.1rem;
+margin: 0;
+color: #DE1A1A;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.50vw #000000;
+text-shadow: -0.35vw 0.35vw 0vw #FFFFFF, -0.75vw 0.70vw 0.20vw #000000;
+}
+h4 {
+  font-family: 'Prompt';
+font-style: normal;
+font-weight: 800;
+font-size: 1.8rem;
+line-height: 1.1rem;
+margin: 0;
+color: #FFB20F;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.50vw #000000;
+filter: drop-shadow(3px 3px 1px #000000)
+}
+
+h5 {
+  font-family: 'Prompt';
+font-style: normal;
+font-weight: 800;
+font-size: 1.4rem;
+line-height: 1.1em;
+margin: 0;
+color: #D7DEDC;
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.50vw #000000;
+filter: drop-shadow(3px 3px 1px #000000)
+}
+h6 {
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 1rem;
+line-height: 1.1rem;
+margin: 0;
+color: hsl(348 4% 45% / 1);
+
+paint-order: stroke fill;
+-webkit-text-stroke: 0.20vw #000000;
+filter: drop-shadow(1px 1px 0px #000000)
+}
+
+
+.date-life {
+
+font-family: 'Josefin Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 4rem;
+line-height: 1.1;
+margin: 0;
+align-items: center;
+justify-content: center;
+
+color: #F7F4F3;
+paint-order: stroke fill;
+-webkit-text-stroke: 0.063em #000000;
+text-shadow: -0.09em 0.09em 0.09em #000000;
+}
+
+#thanks {
+background-image: url("images/paper-rip-bottom.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+min-height: 30vw;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#thanks blockquote {
+margin: 0;
+max-width: 40rem;
+padding: 1.5rem;
+text-align: center;
+position: relative;
+z-index: 1;
+color: #F7F4F3;
+font-family: 'Prompt', normal;
+font-size: 1.8rem;
+line-height: 1.1;
+font-weight:400;
+filter: drop-shadow(3px 3px 1px #000000);
+paint-order: stroke fill;
+-webkit-text-stroke: 0.13em #000000; /*Use em units for stroke, so it follows all scaling of font.*/
+}
+
+
+a:hover {
+text-decoration: none; 
+color: #DE1A1A
+}
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+/* 
+|===========================|
+|-----------FONTS-----------|
+|===========================|
+*/
+
+.prompt-thin {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.prompt-extralight {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.prompt-light {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.prompt-regular {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.prompt-medium {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.prompt-semibold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.prompt-bold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.prompt-extrabold {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.prompt-black {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.prompt-thin-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.prompt-extralight-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.prompt-light-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.prompt-regular-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.prompt-medium-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.prompt-semibold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.prompt-bold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.prompt-extrabold-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.prompt-black-italic {
+  font-family: "Prompt", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* 
+|===========================|
+|-----------MEDIA-----------|
+|===========================|
+*/
+/*Added query, because the #thanks font and vagabond-quote font were massive. REMEMBER: headers = vw, other text = rem
+This was just a test, since that super broke in the layout, but later I should add it for all text*/
+
+@media (max-width: 1024px) {
+  #thanks blockquote {
+    font-size: 1.5rem;
+  }
+  #vagabond-quote blockquote {
+  font-size: 1.5rem;
+  filter: drop-shadow(2.5px 2.5px 1px #000000);
+}
+#intro .date-life {
+  font-size: 3.25rem;
+}
+}
+@media (max-width: 768px) {
+  #thanks blockquote {
+    font-size: 1.25rem;
+  }
+  #vagabond-quote blockquote {
+  font-size: 1.25rem;
+  filter: drop-shadow(2px 2px 1px #000000);
+}
+#intro .date-life {
+  font-size: 2.75rem;
+}
+}
+@media (max-width: 480px) {
+  #thanks blockquote {
+    font-size: 1.1rem;
+  }
+  #vagabond-quote blockquote {
+  font-size: 1rem;
+  filter: drop-shadow(1.5px 1.5px 1px #000000);
+}
+#intro .date-life {
+  font-size: 2.25rem;
+}
+}

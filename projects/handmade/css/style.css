@@ -1,0 +1,517 @@
+/* 
+|===========================|
+|----BOX-SIZING-TEMPLATE----|
+|===========================|
+*/
+/*
+
+Goes in BODY properties
+
+
+.a {
+width: 300px;
+padding: 20px;
+border: 5px solid;
+}
+
+
+.b {
+boxing-sizing: border-box;
+width: 300px;
+padding: 20px;
+border: 5px solid;
+}
+
+* {
+box-sizing: border-box;
+}
+*/
+
+/* 
+|==========================|
+|-------END-TEMPLATE-------|
+|==========================|
+*/
+
+/* 
+|==========================|
+|----SECTION-FORMATTING----|
+|==========================|
+*/
+header,
+nav,
+footer,
+#intro,
+#ingredients,
+#instructions,
+#notes,
+#history,
+#regions,
+#variations,
+#sources,
+#music {
+  width: 620px;
+  max-width: 100%;
+  margin: 10px auto;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 20px solid transparent;
+  background:
+    linear-gradient(#23549B, #7b9ec5) padding-box no-repeat,
+    url('images/pokeball-border.gif') 0 0 / 20px 20px round border-box;
+}
+
+header {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #7b9ec5;
+}
+
+
+
+
+
+nav {
+  font-family: "Unkempt", cursive;
+   font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.1rem;
+  ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    display: inline-block; /* Makes items sit horizontally */
+    margin-right: 1px; /* Adds spacing between items */
+  }
+  
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+body {
+  background-image: url('images/pika-bg.gif');
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #D7DEDF;
+}
+* {
+    box-sizing: border-box;
+}
+footer {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #7b9ec5;
+}
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+/* 
+|=========================|
+|----HEADER-FORMATTING----|
+|=========================|
+*/
+
+h1 {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #FFCC12;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+h2 {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #FFCC12;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+h3 {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #FFCC12;
+  text-align: center;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+h4 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #D7DEDF;
+  font-style: normal;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+h5 {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFCC12;
+  font-style: normal;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+h6 {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #D7DEDF;
+  font-style: normal;
+  padding: 0.2rem;
+  margin: 0.2rem;
+}
+
+
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+/* 
+|===========================|
+|-CUSTOM SECTION FORMATTING-|
+|===========================|
+*/
+#intro { 
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+#ingredients {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+#instructions {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+#notes {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+
+  #history {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+  #regions {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+  #variations {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+  
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+  #sources {
+
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  padding: 15px;
+
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #7b9ec5;
+}
+
+  #music {
+
+  padding: 15px;
+  margin-inline: auto; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+   
+  border-top-style: double;
+  border-right-style: double;
+  border-bottom-style: double;
+  border-left-style: double;
+  
+  border-top-width: 20px;
+  border-right-width: 20px;
+  border-bottom-width: 20px;
+  border-left-width: 20px;
+  
+  background-color: #7b9ec5;
+
+  }
+  
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+
+/* 
+|=========================|
+|-----TEXT-FORMATTING-----|
+|=========================|
+*/
+
+
+.center-text {
+  text-align: center;
+  max-width: 1000px; /* Restricts how wide the text can get */
+  margin-left: auto; /* Dynamically pushes the container from the left */
+  margin-right: auto; /* Dynamically pushes the container from the right */
+  padding: 0 20px; /* Prevents text from touching edges on mobile screens */
+}
+
+
+.text-wrap {
+  white-space: normal; /* Allows normal text wrapping */
+  overflow-wrap: break-word; /* Forces long words/URLs to break if they overflow */
+  text-wrap: pretty; /* makes it so no single word sits on a line by itself */
+}
+
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+/* 
+|==========================|
+|-----IMAGE-FORMATTING-----|
+|==========================|
+*/
+
+.responsive-image {
+  max-width: 70%; /* Scales down smoothly if the screen is narrower than the image */
+  height: auto; /* Keeps the correct aspect ratio so it doesn't distort */
+  display: block; /* Removes unwanted whitespace below the image */
+  margin-left: auto;
+  margin-right: auto;
+}
+.mirrored {
+  transform: scaleX(-1);
+}
+
+.tiny-image {
+scale: 0.5;
+}
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
+
+/* 
+|===========================|
+|-----------FONTS-----------|
+|===========================|
+*/
+
+.unkempt-regular {
+  font-family: "Unkempt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.unkempt-bold {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+.gochi-hand-regular {
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 
+|=========================|
+|-------END-SECTION-------|
+|=========================|
+*/
+
