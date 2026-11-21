@@ -21,7 +21,7 @@ body::before {
   position: fixed;
   inset: -50%;    /* Goes past the edges of the screen, so you can't see the broken corners*/
   z-index: -1;   /* Makes the image sit behind my main content */
-  background-image: url("images/bg-brick.jpg");
+  background-image: url("../images/bg-brick.jpg");
   background-repeat: repeat;
   background-size: 520px;    
   transform: rotate(-25deg);
@@ -223,7 +223,7 @@ opacity: 0;
 }
 
 #vagabond-quote {
-background-image: url("images/paper-rip-top.png");
+background-image: url("../images/paper-rip-top.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 min-height: 30vw;
@@ -310,7 +310,7 @@ color: #F7F4F3;
     0.24rem 0.24rem 0rem hsl(280 85% 55% / 1);           /* 6. Purple */
 }
 #bio {
-background-image: url("images/bio-box.png");
+background-image: url("../images/bio-box.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 width: 45%;
@@ -571,7 +571,7 @@ text-shadow: -0.09em 0.09em 0.09em #000000;
 }
 
 #thanks {
-background-image: url("images/paper-rip-bottom.png");
+background-image: url("../images/paper-rip-bottom.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 min-height: 30vw;

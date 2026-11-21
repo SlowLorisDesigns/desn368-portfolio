@@ -35,7 +35,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   padding: 0 20px;
 }
-.weeks {
+.quarter {
   font-family: "Fuzzy Bubbles", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -64,39 +64,39 @@ body {
 
 /* ID Rules */
 
-#week-0 {
+#first-quarter {
   font-size: 20px;
   color: #48c4d5;
 }
-#week-1 {
+#second-quarter {
   font-size: 20px;
   color: #5cb8d1;
 }
-#week-2 {
+#third-quarter {
   font-size: 20px;
   color: #6aaccd;
 }
-#week-3 {
+#fourth-quarter {
   font-size: 20px;
   color: #759fc9;
 }
-#week-4 {
+#fifth-quarter {
   font-size: 20px;
   color: #8486c1;
 }
-#week-5 {
+#sixth-quarter {
   font-size: 20px;
   color: #8a79bd;
 }
-#week-6 {
+#seventh-quarter {
   font-size: 20px;
   color: #8e6cb9;
 }
-#week-7 {
+#eighth-quarter {
   font-size: 20px;
   color: #925db5;
 }
-#week-8 {
+#ninth-quarter {
   font-size: 20px;
   color: #954eb1;
 }
@@ -139,11 +139,12 @@ nav {
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   ul {
     list-style-type: none; /* Removes bullet points */
     padding: 0;
     margin: 0;
+    display: inline-block; 
   }
   ul li {
     display: inline-block; /* Makes items sit horizontally */
@@ -151,6 +152,14 @@ nav {
   }
 }
 
+#projects {
+  ol {
+    list-style-type: circle;
+  }
+  ul {
+    list-style-type: disc;
+  }
+}
 /* Fonts */
 .twinkle-star-regular {
   font-family: "Twinkle Star", cursive;

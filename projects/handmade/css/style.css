@@ -58,7 +58,7 @@ footer,
   border: 20px solid transparent;
   background:
     linear-gradient(#23549B, #7b9ec5) padding-box no-repeat,
-    url('images/pokeball-border.gif') 0 0 / 20px 20px round border-box;
+    url('../images/pokeball-border.gif') 0 0 / 20px 20px round border-box;
 }
 
 header {
@@ -121,7 +121,7 @@ nav {
 }
 
 body {
-  background-image: url('images/pika-bg.gif');
+  background-image: url('../images/pika-bg.gif');
   font-family: "Gochi Hand", cursive;
   font-weight: 400;
   font-style: normal;
