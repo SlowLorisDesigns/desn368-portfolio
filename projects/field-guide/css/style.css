@@ -1,0 +1,43 @@
+/* ========== 1. RESET ========== */
+/**, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }*/
+
+/* ========== 2. VARIABLES ========== */
+/*:root {
+  --brand: 24;                         /* hue number *//*
+  --ink: hsl(var(--brand) 20% 15%);
+  --accent: hsl(var(--brand) 90% 55%);
+  --base-font: 'Josefin Sans', sans-serif;
+  --gap: 2rem;
+}*/
+
+/* ========== 3. BASE ELEMENTS ========== */
+/*body { font-family: var(--base-font); font-size: 1rem; line-height: 1.5; color: var(--ink); }
+h1, h2, h3 { line-height: 1.1; }
+img { display: block; height: auto; max-width: 100%; }
+a { color: var(--accent); }*/
+
+/* ========== 4. REGIONS (in page order) ========== */
+/* header → intro → gallery → ... → footer */
+
+/* ========== 5. REUSABLE COMPONENTS ========== */
+/* .photo-card, .entry, .button ... */
+
+/* ========== 6. UTILITIES ========== */
+/* .sr-only, .rainbow ... */
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.roboto-condensed-<uniquifier> {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+/* ========== 7. MEDIA QUERIES (always last) ========== */
