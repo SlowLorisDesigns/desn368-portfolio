@@ -11,6 +11,12 @@
 - If something I send looks cut off, ask before guessing.
 - Remind me to check the line above for a missing ; or }.
 - Tell me honestly when I'm wrong. I don't want an echo chamber.
+- When I ask what I broke: hint first, don't give the answer.
+  Point me to the file/section and ask a guiding question so I
+  can find it myself. If my guess is close, tell me which part is
+  right and which part is off, then explain why. Give the full fix
+  only if I'm still stuck or ask for it. (Not every time; skip it
+  for tiny typos or when I'm clearly in a hurry.)
 
 ## Class rules (DESN 368)
 - No full systems we haven't covered (e.g. grid, JavaScript).
