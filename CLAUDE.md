@@ -39,4 +39,33 @@ When I say "starting up" or "back to work":
 2. Read "Where I left off" and tell me what's next.
 
 ## Where I left off
-(nothing yet)
+**Session 1 (2026-11-21)**
+
+Finished:
+- Tribute + Handmade: CSS image paths fixed (../), Handmade page
+  links fixed, favicon/badge leading "/" removed. Live on Pages.
+- Homepage: #first-quarter link, project links now relative.
+- Field Guide set up: assets/images/{shared,survivor,killer,icons},
+  reset.css linked before style.css.
+- Field Guide landing page (index.html) HTML is DONE: header with
+  h1 title image, nav with Survivor/Killer image links, footer
+  with Behaviour + Zetafonts credits.
+
+Next:
+- Survivor side HTML (survivor-home.html), HTML only, no CSS yet.
+  Plan: sticky sidebar with 2 navs (main category icons + sub nav
+  icons linking to #section ids), divider between them.
+  Sections use <section id> > <details> > <summary><h2>.
+- Then killer-home.html, Trapper page, case-study.html.
+
+Decisions / notes:
+- Cocogoose font: images ONLY (license forbids sharing the font
+  file). Never put the font file in the repo.
+- Nav icon order must be the same on every page (mockups differ
+  by mistake).
+- Teacher OK'd: landing page as index.html, smaller icon nav.
+- <pre><code> requirement is probably a leftover; confirm with
+  teacher or use it for stats.
+- Still to confirm with teacher: <details>/<summary> and <video>.
+- Footer still needs the two buttons (View Portfolio, Read Case
+  Study) once images are picked.
