@@ -72,6 +72,22 @@ Finished:
   when user says "case study note").
 - Duplicate shared/nav images: still undecided.
 
+**Session 4 (2026-11-23, in class) notes**
+- Teacher gave an extension. Target: done tomorrow night (11-24);
+  holiday gives some buffer.
+- Pill background: NOT switching to neutral. Keep it themed so it
+  stays matching. Instead change the background color of the
+  buttons. Reason: future classes for text over pop-out menu
+  options + killer select images will match the theme too.
+  TODO: tweak the color I picked.
+- Order: Trapper styling → case study (copy Trapper shell, one
+  "Case Study" section) → survivor/killer home pages (real
+  sentences, not lorem ipsum; write one, copy, swap words).
+- Last-resort plan if homes aren't done (~tomorrow afternoon):
+  landing Killer button href → killer-trapper.html; remove href
+  from landing Survivor button + Trapper nav slots 1 and 3.
+- case-study.html is currently EMPTY and every footer links to it.
+
 Next (in order), trapper page during/after class:
 1. Section bars: style <summary> (bg image, h3 size).
 2. Section bodies: section-bg.png, padding.
