@@ -23,7 +23,44 @@ img {
   height: auto;
   max-width: 100%;
 }
+footer {
+  text-align: center; /* centering all footer*/
+}
+footer p {
+  font-size: 0.75em; /* smaller credits line */
+}
 
+footer ul {
+  display: flex; /* links side by side */
+  justify-content: center; /* centered */
+  gap: 2em; /* space between them */
+}
+footer img {
+  width: 5em; /* icon size */
+  margin-inline: auto; /* centers icon above its text */
+}
+footer a {
+  font-size: 0.75em; /*smaller text for the bottom nav*/
+  text-transform: uppercase; /* all caps */
+}
+.landing {
+  /* splash image */
+  background-image: url("../assets/images/shared/landing-splash.png");
+  background-size: auto 85vh;  /* allows a little space, but not all*/
+  background-repeat: no-repeat;    /* no tiling */
+  background-position: center 65%; 
+
+  /* footer at the bottom */
+  display: flex;                 /* lets main stretch... */
+  flex-direction: column;        /* ...top to bottom instead of side by side */
+  min-height: 100vh;             /* page is at least one full screen tall */
+}
+.choose-side {
+  flex-grow: 1;              /* nav takes the leftover space */
+  display: flex;             /* so it can center its child... */
+  flex-direction: column;    /* ...top to bottom */
+  justify-content: center;   /* ul sits in the vertical middle */
+}
 /* ========== 4. REGIONS (in page order) ========== */
 body {
   background-color: var(
@@ -54,6 +91,22 @@ footer ul {
 .sub-nav img {
   width: 3em; /* Size of sub-nav orbs*/
 }
+header h1 img {
+  margin-inline: auto;
+  width: 100%;       /* shrink to fit small screens */
+  max-width: 28em;   /* but never bigger than this */
+}
+.choose-side li + li {
+  margin-top: 10vh; /* space above the 2nd one only */
+}
+
+.choose-side img {
+  width: 15em; /*surv/killer size */
+  margin-inline: auto; /* centers  */
+}
+.choose-side .survivor-enter {
+  width: 16.5em;   /* Attempting to match visual weight of killer text*/
+}
 /* ========== 6. UTILITIES ========== */
 /* .sr-only, .rainbow ... */
 /* ========== 7. MEDIA QUERIES (always last) ========== */
@@ -74,9 +127,6 @@ footer ul {
     height: 100vh; /* 100% of the screen's height */
     width: auto; /* width follows, so he keeps his proportions */
     max-width: 30vw; /* let him be wider than the sidebar if needed */
-  }
-
-  .sidebar .hero {
     position: absolute; /* leave the flow, so they stop pushing each other */
     bottom: 0; /* pin each one to the sidebar's bottom edge */
     left: 0; /* line both up on the left edge */
@@ -92,15 +142,35 @@ footer ul {
     left: 3em;
   }
   .sidebar nav img {
-  width: 70%;          /*fit icons better within the pill bg*/
-  margin-inline: auto; /* center the icons within the pill bg*/
-}
+    width: 70%; /*fit icons better within the pill bg*/
+    margin-inline: auto; /* center the icons within the pill bg*/
+  }
+  .sidebar details {
+    position: relative; /* killers are relative to the nav*/
+  }
+  .killer-select {
+    position: absolute; /* the pill is absolute on the pill, so it doesn't move*/
+    top: 0; /* lines up with the machete's top */
+    left: 70%; /* begins right where the machete ends */
+    width: 8.5em; /* killer button width */
+  }
+  .killer-select img {
+    width: 100%; /* let's the icons for killer sections get bigger*/
+  }
+  summary {
+    list-style: none; /* hides the little ▶ triangle */
+  }
   header,
   main,
   footer {
     margin-left: var(--sidebar-width); /* start right after the sidebar */
     position: relative; /*allows z-index to actually work*/
     z-index: 1; /*Let's the text stay above Hero Image in the heirarchy*/
+  }
+  .landing header,
+  .landing main,
+  .landing footer {
+    margin-left: 0; /* no sidebar on the landing page */
   }
 }
 @media (min-width: 120em) {
