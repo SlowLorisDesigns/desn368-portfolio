@@ -39,33 +39,70 @@ When I say "starting up" or "back to work":
 2. Read "Where I left off" and tell me what's next.
 
 ## Where I left off
-**Session 1 (2026-11-21)**
+**Session 2 (2026-11-22 → 23, overnight)**
 
 Finished:
-- Tribute + Handmade: CSS image paths fixed (../), Handmade page
-  links fixed, favicon/badge leading "/" removed. Live on Pages.
-- Homepage: #first-quarter link, project links now relative.
-- Field Guide set up: assets/images/{shared,survivor,killer,icons},
-  reset.css linked before style.css.
-- Field Guide landing page (index.html) HTML is DONE: header with
-  h1 title image, nav with Survivor/Killer image links, footer
-  with Behaviour + Zetafonts credits.
+- HTML DONE for index, survivor-home, killer-home, killer-trapper
+  (all checked: tags nest correctly, every image/video path exists).
+- Footer on every page: Case Study + Portfolio links, visible text
+  labels, alt="".
+- Sidebar: <div class="sidebar"> holds hero <img class="hero"> +
+  <nav>. Killer pages have the nested <ul class="killer-select">
+  flyout (Trapper link, Mastermind locked, no href).
+- Trapper page: 6 sections, <div> per <h4> subtopic, 6 looping
+  videos (autoplay muted loop playsinline).
+- CSS: variables + per-side colors via body class (.survivor /
+  .killer set --bg and --nav-bg); Roboto Condensed, -0.05em
+  spacing; orbs in a flex row; desktop media query (64em): fixed
+  sidebar, hero 100vh (max 30vw), nav pill centered vertically
+  (top 50% + translateY(-50%)), content z-index above hero;
+  120em query bumps body to 1.75em.
 
-Next:
-- Survivor side HTML (survivor-home.html), HTML only, no CSS yet.
-  Plan: sticky sidebar with 2 navs (main category icons + sub nav
-  icons linking to #section ids), divider between them.
-  Sections use <section id> > <details> > <summary><h2>.
-- Then killer-home.html, Trapper page, case-study.html.
+NOT committed yet: style.css + 3 HTML files + 2 new images in
+shared/nav/ (trapper-select, wesker-select; duplicates of
+killer/nav/ ones? delete one set).
+
+Next (in order):
+1. Commit + push first.
+2. Quick fixes: alt="Wesker" → "Mastermind (coming soon)" on
+   killer-home + killer-trapper (line 58). Merge the two
+   `.sidebar .hero` rules in the media query.
+3. Section bars: style <summary> + section backgrounds
+   (background-image in CSS, remember ../ paths).
+4. Flyout: position .killer-select beside the machete, show on
+   :hover / :focus-within (desktop only; hidden on phones).
+5. Mobile pass: nav icons are huge on phones (no phone CSS for
+   the sidebar yet); hero = fixed dimmed background behind content.
+6. Orb labels: center under orbs, small + light (0.75em, 300).
+7. case-study.html. Check live on Pages.
 
 Decisions / notes:
 - Cocogoose font: images ONLY (license forbids sharing the font
   file). Never put the font file in the repo.
-- Nav icon order must be the same on every page (mockups differ
-  by mistake).
+- Nav slots are ordered by JOB, not by side: 1 = this side's home,
+  2 = advanced/killer select, 3 = other side, 4 = exit to index.
+  (Survivor slot 3 → killer-home.html TEMP; later
+  survivor-killer-counter.html.)
+- Unfinished pages: no href + baked-in "-locked" image + "(coming
+  soon)" in alt. Don't make a page file until it has content.
+- Flat file names with prefixes (killer-*, survivor-*), no page
+  subfolders yet.
+- Images: content = HTML <img> with alt; decoration = CSS
+  background. Icon next to visible text = alt="".
+- VS Code preview can't play mp4: test videos in a real browser.
 - Teacher OK'd: landing page as index.html, smaller icon nav.
 - <pre><code> requirement is probably a leftover; confirm with
   teacher or use it for stats.
 - Still to confirm with teacher: <details>/<summary> and <video>.
-- Footer still needs the two buttons (View Portfolio, Read Case
-  Study) once images are picked.
+- Case study ideas: nav ordered by function; CSS drop-shadow
+  instead of baked shadows; killer select hub page; nested page
+  folders once there are 15+ pages.
+
+Cheat sheet (user asked me to keep this; give a rundown at the
+end of each session and add new items):
+- Ctrl+H: find & replace (one or all)
+- Shift+Alt+F: format file / fix indents
+- Ctrl+, : settings
+- Esc: dismiss a suggestion
+- Type a tag, then Enter right away: cursor lands between open
+  and close tags
