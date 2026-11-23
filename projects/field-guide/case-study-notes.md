@@ -32,6 +32,11 @@ Raw notes to turn into case-study.html. Not a page itself.
   file, so the font file never goes in the repo.
 - **Hero character** sits in a fixed sidebar, pinned to the bottom, with text layered above it
   (z-index).
+- **Matched the landing buttons by letter height, not width.** "Survivor" is a much longer word
+  than "Killer," so making the images the same width looked wrong. Each button gets its own size,
+  worked out from the image's real shape, so the letters look the same height.
+- **Visual hierarchy on phones:** the header logo should always look bigger than the nav buttons.
+  The buttons use smaller caps on phones and their full size only on desktop.
 
 ## Problems I hit (and what I learned)
 - Videos looked broken. They were hidden inside closed `<details>`, and the VS Code preview can't
@@ -54,7 +59,16 @@ Raw notes to turn into case-study.html. Not a page itself.
   `.landing` body class to cancel it.
 - Background `cover` vs `contain` vs exact size: I wanted the splash to fade into the dark,
   not fill the screen.
-
+- The footer labels sat too far below their icons. The CSS was fine; the PNGs had see-through
+  empty space at the bottom. Fix: a small negative `margin-bottom` (in em) on the icon, so the
+  text overlaps that empty space. (Cropping the PNGs would be the cleaner fix.)
+- Setting BOTH `width` and `height` on the killer button stretched it about 13% wider than its
+  real shape. It was subtle, but it would have squashed on phones once the width became a %.
+  Fix: set only the width and let `height: auto` keep the shape.
+- `width: 70%` + `max-width: 17em` still didn't shrink the buttons on phones. The % only kicks in
+  once the screen is narrower than max-width ÷ % (17 ÷ 0.7 ≈ 24em ≈ 390px), so most phones still
+  hit the cap. Fix (mobile-first): a smaller max-width outside the media query for phones, and
+  the full max-width inside the 64em query for desktop. Inside a query, write only what changes.
 ## If I had more time / next time
 - **Reusable lock overlay** (CSS) instead of baking a lock into every image. Then I could lock any
   unfinished section on the fly.

@@ -25,47 +25,46 @@ img {
 }
 footer {
   text-align: center; /* centering all footer*/
+  bottom: 0; /*foot hugs the bottom of the page*/
 }
 footer p {
-  font-size: 0.75em; /* smaller credits line */
+  font-size: 0.6em; /* smaller credits line */
 }
 
 footer ul {
   display: flex; /* links side by side */
   justify-content: center; /* centered */
-  gap: 2em; /* space between them */
+  gap: 0.3em; /* space between them */
 }
 footer img {
-  width: 5em; /* icon size */
+  width: 7em; /* icon size */
   margin-inline: auto; /* centers icon above its text */
+  margin-bottom: -1.5em; /*pulls the img down to have the transparent space overlap with the text*/
 }
 footer a {
-  font-size: 0.75em; /*smaller text for the bottom nav*/
+  font-size: 0.55em; /*smaller text for the bottom nav*/
   text-transform: uppercase; /* all caps */
 }
 .landing {
   /* splash image */
   background-image: url("../assets/images/shared/landing-splash.png");
-  background-size: auto 85vh;  /* allows a little space, but not all*/
-  background-repeat: no-repeat;    /* no tiling */
-  background-position: center 65%; 
-
-  /* footer at the bottom */
-  display: flex;                 /* lets main stretch... */
-  flex-direction: column;        /* ...top to bottom instead of side by side */
-  min-height: 100vh;             /* page is at least one full screen tall */
+  background-size: auto 80vh; /* allows a little space, but not all*/
+  background-repeat: no-repeat; /* no tiling */
+  background-position: center 80%;
+  display: flex; /* lets main stretch... */
+  flex-direction: column; /* nav is top to bottom instead of side by side */
+  min-height: 100vh; /* page is considered 1 screen high */
 }
 .choose-side {
-  flex-grow: 1;              /* nav takes the leftover space */
-  display: flex;             /* so it can center its child... */
-  flex-direction: column;    /* ...top to bottom */
-  justify-content: center;   /* ul sits in the vertical middle */
+  flex-grow: 1; /*nav takes remaining space */
+  display: flex; /*centering the children */
+  flex-direction: column; /*flexing from top to bottom */
+  justify-content: center; /*kller-survivor sit in the vertical middle */
+  padding-top: 2em; /*moving the nav down a little*/
 }
 /* ========== 4. REGIONS (in page order) ========== */
 body {
-  background-color: var(
-    --bg
-  ); /* use this to set bg color on all pages at different values */
+  background-color: var(--bg); /* use this to set bg color on all pages at different values */
   font-family: var(--font-body);
   color: var(--text);
   line-height: 1.4;
@@ -73,7 +72,7 @@ body {
   letter-spacing: -0.05em;
 }
 header p {
-  font-size: 1.667em;
+  font-size: 1.5em;
 }
 nav ul,
 footer ul {
@@ -93,19 +92,24 @@ footer ul {
 }
 header h1 img {
   margin-inline: auto;
-  width: 100%;       /* shrink to fit small screens */
-  max-width: 28em;   /* but never bigger than this */
+  width: 100%; /* shrink to fit small screens */
+  max-width: 20em; /* but never bigger than this */
 }
 .choose-side li + li {
   margin-top: 10vh; /* space above the 2nd one only */
 }
 
 .choose-side img {
-  width: 15em; /*surv/killer size */
+  /*surv/killer size */
   margin-inline: auto; /* centers  */
 }
 .choose-side .survivor-enter {
-  width: 16.5em;   /* Attempting to match visual weight of killer text*/
+  max-width: 14em; /* Attempting to match visual weight of killer text*/
+  width: 70%; /*keeps it looking roughly 17em no matter the width*/
+}
+.choose-side .killer-enter {
+  max-width: 9.5em; /* Attempting to match visual weight of survivor text*/
+  width: 48%; /*keeps it looking like it's max-width depending on screen size*/
 }
 /* ========== 6. UTILITIES ========== */
 /* .sr-only, .rainbow ... */
@@ -115,7 +119,14 @@ header h1 img {
   body {
     font-size: 1.5em;
   } /* Roughly 24px and grows*/
-
+  .choose-side .survivor-enter {
+    max-width: 15em; /* Attempting to match visual weight of killer text*/
+    width: 70%; /*keeps it looking roughly 17em no matter the width*/
+  }
+  .choose-side .killer-enter {
+    max-width: 9.5em; /* Attempting to match visual weight of survivor text*/
+    width: 48%; /*keeps it looking like it's max-width depending on screen size*/
+  }
   .sidebar {
     position: fixed; /* keeps with the scroll*/
     top: 0; /* stays at the top */
