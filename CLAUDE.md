@@ -58,23 +58,27 @@ Finished:
   (top 50% + translateY(-50%)), content z-index above hero;
   120em query bumps body to 1.75em.
 
-NOT committed yet: style.css + 3 HTML files + 2 new images in
-shared/nav/ (trapper-select, wesker-select; duplicates of
-killer/nav/ ones? delete one set).
+**Session 3 (2026-11-23 morning, before class)**
+- Killer select button is now <details>/<summary> (opens the
+  flyout, links nowhere) on both killer pages; flyout positioned
+  beside the machete (desktop query). Mastermind alt fixed.
+- Landing page DONE: body.landing (cancels sidebar margin, flex
+  column + min-height 100vh pushes footer down), splash bg
+  (auto 85vh, center 15vh), .choose-side nav centers the stacked
+  buttons vertically, .survivor-enter img 1.5x, header img
+  width 100% + max-width 28em.
+- Footer: flex row, centered, small uppercase labels.
+- case-study-notes.md created in field-guide/ (I keep adding to it
+  when user says "case study note").
+- Duplicate shared/nav images: still undecided.
 
-Next (in order):
-1. Commit + push first.
-2. Quick fixes: alt="Wesker" → "Mastermind (coming soon)" on
-   killer-home + killer-trapper (line 58). Merge the two
-   `.sidebar .hero` rules in the media query.
-3. Section bars: style <summary> + section backgrounds
-   (background-image in CSS, remember ../ paths).
-4. Flyout: position .killer-select beside the machete, show on
-   :hover / :focus-within (desktop only; hidden on phones).
-5. Mobile pass: nav icons are huge on phones (no phone CSS for
-   the sidebar yet); hero = fixed dimmed background behind content.
-6. Orb labels: center under orbs, small + light (0.75em, 300).
-7. case-study.html. Check live on Pages.
+Next (in order), trapper page during/after class:
+1. Section bars: style <summary> (bg image, h3 size).
+2. Section bodies: section-bg.png, padding.
+3. Size videos + power images (width 100% + max-width).
+4. .name under h1; orb labels small/light.
+5. Mobile pass (sidebar has no phone CSS).
+6. case-study.html from case-study-notes.md. Check live on Pages.
 
 Decisions / notes:
 - Cocogoose font: images ONLY (license forbids sharing the font
