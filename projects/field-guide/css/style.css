@@ -111,6 +111,11 @@ header h1 img {
   max-width: 9.5em; /* Attempting to match visual weight of survivor text*/
   width: 48%; /*keeps it looking like it's max-width depending on screen size*/
 }
+.tips {
+  max-width: 1.5em; /*the max width an info or warning icon can be*/
+  width: 70%;
+  
+}
 /* ========== 6. UTILITIES ========== */
 /* .sr-only, .rainbow ... */
 /* ========== 7. MEDIA QUERIES (always last) ========== */
